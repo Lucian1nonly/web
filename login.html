@@ -1,0 +1,65 @@
+<!-- login.html -->
+<html>
+<head>
+    <title>Login Sederhana</title>
+</head>
+<body>
+
+<center>
+
+<h2>LOGIN USER</h2>
+
+<form onsubmit="return login()">
+
+<table>
+
+<tr>
+    <td>Username</td>
+    <td><input type="text" id="username"></td>
+</tr>
+
+<tr>
+    <td>Password</td>
+    <td><input type="password" id="password"></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td><input type="submit" value="LOGIN"></td>
+</tr>
+
+</table>
+
+</form>
+
+</center>
+
+<script>
+
+function login(){
+
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // LOGIN ADMIN
+    if(username=="admin" && password=="admin123"){
+        window.location="admin.html";
+    }
+
+    // LOGIN MEMBER
+    else if(username=="member" && password=="member123"){
+        window.location="member.html";
+    }
+
+    // LOGIN GAGAL
+    else{
+        alert("Username atau Password Salah");
+    }
+
+    return false;
+}
+
+</script>
+
+</body>
+</html>
